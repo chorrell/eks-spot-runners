@@ -17,3 +17,19 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.auto.tfvars
+!*.example.tfvars
+
+# Kubeconfig written by `aws eks update-kubeconfig --kubeconfig ...`
+kubeconfig*

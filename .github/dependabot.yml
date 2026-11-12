@@ -28,3 +28,21 @@ updates:
     multi-ecosystem-group: "tooling"
     cooldown:
       default-days: 7
+
+  # Terraform providers and modules, kept out of the auto-merged `tooling`
+  # group: an EKS, Karpenter or AWS provider bump can change the cluster.
+  - package-ecosystem: "terraform"
+    directory: "/terraform"
+    schedule:
+      interval: "monthly"
+    groups:
+      terraform:
+        patterns:
+          - "*"
+    pull-request-branch-name:
+      separator: "/"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    cooldown:
+      default-days: 7
